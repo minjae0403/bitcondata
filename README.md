@@ -1,7 +1,7 @@
 # bitcondata
 Mini personal project using Bitcon data
 
-#### 1. 로컬에 연결
+#### 1. 로컬과 git 연결
 > 1. (터미널에) git init
 > 2. (터미널에) git remote add https://github.com/minjae0403/bitcondata.git
 > 3. (터미널에) git pull origin main
