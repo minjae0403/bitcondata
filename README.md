@@ -5,10 +5,14 @@ Mini personal project using Bitcon data
 #### 1-1. git init -> git remote add https://github.com/minjae0403/bitcondata.git -> git pull origin main
 ####
 
-1. conda 가상환경 vs venv가상환경
 
-conda의 특징
-1. 플랫폼 독립성 : 다양한 훈영 체제에서 동일한 방식으로 사용 가능 (즉, window와 mac, Linux 등 다른 운영 체제에서도 사용 가능)
+---
+#### 미니프로젝트 중 공부한 사실
+##### 1. conda 가상환경 vs venv가상환경
+
+##### conda의 특징
+
+##### 1. 플랫폼 독립성 : 다양한 훈영 체제에서 동일한 방식으로 사용 가능 (즉, window와 mac, Linux 등 다른 운영 체제에서도 사용 가능)
 2. 다양한 언어 지원 : 파이썬 외에도 R, Ruby등 다양한 언어의 패키지 지원
 3. 대규모 데이터 과학 프로젝트에 적합 : 복잡한 패키지들을 쉽게 설치 및 관리할 수 있다.
 4. 의존성 충돌 방지 : Conda는 패키지간의 의존성을 체크하여 충돌을 방지 가능
