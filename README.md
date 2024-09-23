@@ -28,4 +28,4 @@ Mini personal project using Bitcon data
 
 > 각 기술별 장단점이 있지만 Conda는 복잡하고, 라이브러리가 많이 들어가는 작업에 적합(의존성관리 부분), Venv는 기본으로 사용 및 가변운 프로젝트에 사용하기 좋다.
 
-> MySQL Connector Python 사용 이유 : MySQL 공식드라이버로 최적화가 되었으며, 성능이 우수하기 때문에 실시간 데이터를 저장하기 좋을것으로 판단된다.
+> **MySQL Connector Python 사용 이유** : MySQL 공식드라이버로 최적화가 되었으며, 성능이 우수하기 때문에 실시간 데이터를 저장하기 좋을것으로 판단된다.
