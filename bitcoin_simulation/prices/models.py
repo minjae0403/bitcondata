@@ -2,9 +2,9 @@ from django.db import models
 
 class BitcoinPrice(models.Model):
     Open_time = models.DateTimeField(primary_key=True)
-    open = models.FloatField()
-    high = models.FloatField()
-    low = models.FloatField()
+    Open = models.FloatField()
+    High = models.FloatField()
+    Low = models.FloatField()
     Close = models.FloatField()
     trades = models.IntegerField()
 
