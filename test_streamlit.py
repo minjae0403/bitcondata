@@ -1,7 +1,7 @@
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
-import streamlit as st
+import test_streamlit as st
 import mysql.connector
 import pandas as pd
 import dash
@@ -14,18 +14,18 @@ def get_data_from_db():
         host="localhost",
         user="root",
         password="12345",
-        database="crypto_db",
+        database="crypto_oneday_db",
         port=3306
     )
     cursor = db.cursor()
 
     # 데이터 가져오기
-    query = "SELECT timestamp, price FROM crypto_prices ORDER BY timestamp ASC"
+    query = "SELECT Open_time, Open, High, Low, Close, trades FROM btcusdt ORDER BY Open_time ASC"
     cursor.execute(query)
     result = cursor.fetchall()
 
     # 데이터프레임으로 변환
-    df = pd.DataFrame(result, columns=["timestamp", "price"])
+    df = pd.DataFrame(result, columns=["Open_time", "Open", "High", "Low", "Close", "trades"])
 
     # 연결 종료
     cursor.close()
@@ -42,7 +42,7 @@ app = dash.Dash(__name__)
 
 # 데이터 가져오기
 df = get_data_from_db()
-df['timestamp'] = pd.to_datetime(df['timestamp'])
+df['Open_time'] = pd.to_datetime(df['Open_time'])
 
 # 데이터가 없을 경우 경고 메시지
 if df.empty:
@@ -67,14 +67,14 @@ else:
         fig = go.Figure()
 
         # 가격 데이터 추가
-        fig.add_trace(go.Scatter(x=df['timestamp'], y=df['price'], mode='lines', name='Price'))
+        fig.add_trace(go.Scatter(x=df['Open_time'], y=df['Close'], mode='lines', name='Price'))
 
         # 직선 추가
         if n_clicks > 0:
             fig.add_shape(
                 type="line",
-                x0=df['timestamp'].min(), y0=y_value,
-                x1=df['timestamp'].max(), y1=y_value,
+                x0=df['Open_time'].min(), y0=y_value,
+                x1=df['Open_time'].max(), y1=y_value,
                 line=dict(color="Red", width=2, dash="dash")  # 점선 형태로
             )
 
