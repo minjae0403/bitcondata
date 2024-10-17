@@ -1,15 +1,25 @@
 # bitcondata
-Mini personal project using Bitcon data
+Mini personal project using Bitcoin data
+
+# 해당 프로젝트의 목표
+django를 이용한 백엔드 공부 및 응용을 통한 제작
+가벼운 모델을 붙일 수 있다면 사용하여 학습 및 예측까지 붙이고자 합니다.
+
+# 기간
+2024.10.10 ~ (진행중)
 
 #### 1. 로컬과 git 연결
 > 1. (터미널에) git init
 > 2. (터미널에) git remote add https://github.com/minjae0403/bitcondata.git
 > 3. (터미널에) git pull origin main
 
+#### 2. 로컬에 mysql 설치
+> 1. 인터넷의 mysql설치 방법을 따라서 설치
+> 2. 
 
 
 ---
-#### 미니프로젝트 중 공부한 사실
+# 미니프로젝트 중 공부한 사실
 ##### 1. conda 가상환경 vs venv가상환경
 
 **conda의 특징**
